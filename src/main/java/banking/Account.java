@@ -11,22 +11,22 @@ import java.util.stream.Collectors;
 public abstract class Account implements Comparable<Account> {
     private static int nextId = 1;
 
-    protected final Customer customer;
+    protected final banking.Customer customer;
     protected final String accountId;
     protected String description;
     protected final LocalDateTime creationDate;
     // protected StatementCycle statementCycle; // An enum representing any
     //                                          // possible statement cycle
     protected double balance;
-    protected List<Transaction> transactions = new ArrayList<>();
+    protected List<banking.Transaction> transactions = new ArrayList<>();
 
     /**
      * @param cust Customer owning this account
      * @param initialBalance Current balance
      * @param accountDescription A description
      */
-    public Account (Customer cust, double initialBalance,
-            String accountDescription) {
+    public Account (banking.Customer cust, double initialBalance,
+                    String accountDescription) {
         this.customer = cust;
         this.creationDate = LocalDateTime.now();
         this.accountId = "";
@@ -81,7 +81,7 @@ public abstract class Account implements Comparable<Account> {
     /**
      * @return read-only view of the account's transaction list
      */
-    public List<Transaction> getTransactions () {
+    public List<banking.Transaction> getTransactions () {
         return null;  // Stub
     }
 
@@ -90,7 +90,7 @@ public abstract class Account implements Comparable<Account> {
      * @return the matching transaction
      * @throws IllegalArgumentException when no such transaction exists
      */
-    public Transaction getTransaction (int transactionId) {
+    public banking.Transaction getTransaction (int transactionId) {
         return null;  // Stub
     }
 

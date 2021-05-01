@@ -6,7 +6,7 @@ import static banking.TransactionType.*;
  * @author wpollock
  *
  */
-public class SavingsAccount extends Account {
+public class SavingsAccount extends banking.Account {
     // Default monthly interest rate, applied on last day of statement cycle:
     private static double DEFAULT_INTEREST_RATE = 2.0;  // a percent
 
@@ -15,8 +15,8 @@ public class SavingsAccount extends Account {
      * @param initialBalance The initial account balance
      * @param description An account description provided by the owner
      */
-    public SavingsAccount (Customer cust, double initialBalance,
-            String description) {
+    public SavingsAccount (banking.Customer cust, double initialBalance,
+                           String description) {
         super(cust, initialBalance, description);
     }
 
@@ -26,8 +26,8 @@ public class SavingsAccount extends Account {
      * @param description An account description provided by the owner
      * @param interestRate  Account's default monthly interest rate
      */
-    public SavingsAccount (Customer cust, double initialBalance,
-            String description, double interestRate) {
+    public SavingsAccount (banking.Customer cust, double initialBalance,
+                           String description, double interestRate) {
         super(cust, initialBalance, description);
         // Stub
     }
