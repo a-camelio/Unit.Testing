@@ -4,63 +4,155 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class AccountTest {
 
+    Customer customer = "Hymie Piffle";
+    string acctID = "1234";
+    string description = "Account balance is low";
+    LocalDateTime openingDate = LocalDateTime.now();
+    double amount = 300.00;
+
     @Test
     void deposit() {
+        double testAmount = this.amount;
+        if (testAmount > 20) {
+            println(testAmount + " Has been deposited into your account. ");
+        } else {
+            println("Enter an amount greater than 20 to continue transaction.");
+        }
     }
 
     @Test
     void withdraw() {
+        double mainAccount = this.amount;
+        double fee = 3.00;
+        double withdrawAmount = 600.00;
+
+        if (withdrawAmount > mainAccount) {
+            println("Insufficient funds. Please re-enter deposit amount. Accessing fee is $3.");
+            mainAccount = mainAccount - fee;
+            println("Your balance is $" + "mainAccount");
+        } else {
+            mainAccount = mainAccount - transferAmount;
+            println("Withdrawal is complete. Your balance is now $" + mainAccount);
+        }
     }
 
     @Test
     void transfer() {
+        double sendAcctBalance = 500;
+        double receiveAcctBalance = 300;
+        double xferAmount = 45;
+        if (xferAmount >= 60) {
+            sendAcctBalance = sendAcctBalance - xferAmount;
+            receiveAcctBalance = recieveAcctBalance + xferAmount;
+            println("Transfer successful! Your account balance is now $" + xferAmount);
+        } else {
+            println("Transfer amount must be at least $60");
+        }
     }
 
     @Test
     void getAccountDescription() {
+        string acctDescription = this.description;
+        string errorDescription = " This Account Is Closed";
+
+        if (errorDescription.matches(acctDescription)) {
+            println("Correct account description");
+        } else {
+            println("Error, please re-enter.");
+        }
     }
 
     @Test
     void setAccountDescription() {
+        string acctDescription = "Savings";
+        string copyDescription = this.description;
+
+        if (acctDescription.matches(copyDescription)) {
+            println("Account description set");
+        } else {
+            println("Error, please re-enter.");
+        }
     }
 
     @Test
     void getBalance() {
+        double currentBalance = this.amount;
+        println("Your current balance is: $" + currentBalance);
     }
 
     @Test
     void getTransactions() {
+        return acctDescription;
     }
 
     @Test
     void getTransaction() {
-    }
+        string transactionID = "123";
+        try {
+            if (transactionID.matches("321")) {
+                println("Transaction found");
+            } else {
+                println("Transaction not found.");
+            }
 
-    @Test
-    void getAccountId() {
-    }
+            @Test
+            void getAccountId() {
+                string mainID = this.acctID;
+                return mainID;
+            }
 
-    @Test
-    void getCustomerId() {
-    }
+            @Test
+            void getCustomerId() {
+                string mainID = this.customer;
+                return mainID;
+            }
 
-    @Test
-    void getAccountCreationDate() {
-    }
+            @Test
+            LocalDateTime getAccountCreationDate() {
+                LocalDateTime openDate = this.creationDate;
+                return openDate;
+            }
 
-    @Test
-    void testHashCode() {
-    }
+            @Test
+            void testHashCode() {
+                fail("Not yet implemented");
+            }
 
-    @Test
-    void testEquals() {
-    }
+            @Test
+            void testEquals() {
+        public Test( double test1, double test2){
+                    test1 = this.account;
+                    test2 = this.account;
+                }
+                Test A1 = new Test(20, 30);
+                Test A2 = new Test(20, 31);
+                if (A1.equals(A2)) {
+                    println("Objects are equal");
+                } else {
+                    println("Objects are not equal");
+                }
+            }
 
-    @Test
-    void compareTo() {
-    }
+            @Test
+            void compareTo() {
+                string b1 = this.acctID;
+                string b2 = "01234";
+                if (!(b1 == b2)) {
+                    string b3 = b1.compareTo(b2);
+                    println("Results: " + b3);
+                }
+                else
+                {
+                    println("Items are equal therefore no comparison can be generated.");
+                }
+            }
 
-    @Test
-    void testToString() {
+            @Test
+            void testToString() {
+                fail("Not yet implemented");
+            }
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
     }
-}
