@@ -26,8 +26,8 @@ public class SavingsAccount extends banking.Account {
      * @param description An account description provided by the owner
      * @param interestRate  Account's default monthly interest rate
      */
-    public SavingsAccount (Customer cust, double initialBalance,
-            String description, double interestRate) {
+    public SavingsAccount (banking.Customer cust, double initialBalance,
+                           String description, double interestRate) {
         super(cust, initialBalance, description);
         // Stub
     }
