@@ -5,7 +5,7 @@ class AccountTest {
 
     Customer customer = "Hymie Piffl";
     string acctID = "1234";
-    string description = "Account balance is low";
+    string description = "Account balance is low!";
     LocalDateTime openingDate = LocalDateTime.now();
     double amount = 300.00;
 
