@@ -5,7 +5,7 @@ import java.time.LocalDateTime;
 
 class AccountTest {
 
-    Customer = "Hymie Piffl";
+    String customer = "Hymie Piffl";
     String acctID = "1234";
     String description = "Account balance is low";
     LocalDateTime openingDate = LocalDateTime.now();
@@ -26,7 +26,7 @@ class AccountTest {
         double mainAccount = this.amount;
         double fee = 3.00;
         double withdrawAmount = 600.00;
-        double transferAmount;
+        double transferAmount = 0;
 
         if (withdrawAmount > mainAccount) {
             System.out.println("Insufficient funds. Please re-enter deposit amount. Accessing fee is $3.");
@@ -44,7 +44,7 @@ class AccountTest {
             double sendAcctBalance = 500;
             double receiveAcctBalance = 300;
             double xferAmount = 45;
-            double recieveAcctBalance;
+            double recieveAcctBalance = 0;
             if (xferAmount < 60) {
                 sendAcctBalance = sendAcctBalance - xferAmount;
                 receiveAcctBalance = recieveAcctBalance + xferAmount;
@@ -83,8 +83,11 @@ class AccountTest {
         }
 
         @Test
-        void getTransactions () {
-            return acctDescription;
+        String getTransactions () {
+
+        String acctDescription = "";
+
+        return acctDescription;
         }
 
         @Test
@@ -100,20 +103,20 @@ class AccountTest {
             }
         }
         @Test
-        void getAccountId () {
+        String getAccountId () {
             String mainID = this.acctID;
             return mainID;
         }
 
         @Test
-        void getCustomerId () {
+        String getCustomerId () {
             String mainID = this.customer;
             return mainID;
         }
 
         @Test
-        void getAccountCreationDate () {
-            LocalDateTime openDate = this.creationDate;
+        LocalDateTime getAccountCreationDate () {
+            LocalDateTime openDate = this.openingDate;
             return openDate;
         }
 
@@ -128,7 +131,8 @@ class AccountTest {
             double test2;
             test1 = this.account;
             test2 = this.account;
-                
+
+            /*
                 Test A1 = new Test(20, 30);
                 Test A2 = new Test(20, 31);
                 if (A1.equals(A2)) {
@@ -138,6 +142,8 @@ class AccountTest {
                 {
                     System.out.println("Objects are not equal");
                 }
+
+             */
             }
 
         @Test
@@ -158,5 +164,6 @@ class AccountTest {
         void testToString () {
             fail("Not yet implemented");
         }
-    }
 }
+
+
