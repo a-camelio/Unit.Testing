@@ -4,7 +4,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class SavingsAccountTest extends Account {
 
-
     @Test
     void deposit(double amount) {
         amount = Account.amount;
@@ -54,5 +53,15 @@ class SavingsAccountTest extends Account {
         {
             System.out.println("account must have over $50 to gain interest");
         }
-
     }
+
+    @Test
+    void getDefaultInterestRate() {
+        return defaultIntRate;
+    }
+
+    @Test
+    void setDefaultInterestRate() {
+        defaultIntRate = testSavingsAccount.intRate;
+    }
+}
