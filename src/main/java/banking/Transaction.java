@@ -20,8 +20,8 @@ public class Transaction implements Comparable<Transaction> {
      * @param description The description of the transaction.
      *        This may include check numbers, memo, payee, etc.
      */
-    public Transaction (TransactionType type, double amount,
-            String description) {
+    public Transaction (banking.TransactionType type, double amount,
+                        String description) {
         this.id = 1;
         this.type = null;
         this.amount = 0.00;

@@ -1,13 +1,16 @@
+import banking.Customer;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
+import java.time.LocalDateTime;
 
 class AccountTest {
 
-    Customer customer = "Hymie Piffl";
-    string acctID = "1234";
-    string description = "Account balance is low";
+    Customer = "Hymie Piffl";
+    String acctID = "1234";
+    String description = "Account balance is low";
     LocalDateTime openingDate = LocalDateTime.now();
     double amount = 300.00;
+    private double account;
 
     @Test
     void deposit () {
@@ -23,6 +26,7 @@ class AccountTest {
         double mainAccount = this.amount;
         double fee = 3.00;
         double withdrawAmount = 600.00;
+        double transferAmount;
 
         if (withdrawAmount > mainAccount) {
             System.out.println("Insufficient funds. Please re-enter deposit amount. Accessing fee is $3.");
@@ -32,6 +36,7 @@ class AccountTest {
             mainAccount = mainAccount - transferAmount;
             System.out.println("Withdrawal is complete. Your balance is now $" + mainAccount);
         }
+    }
 
 
         @Test
@@ -39,6 +44,7 @@ class AccountTest {
             double sendAcctBalance = 500;
             double receiveAcctBalance = 300;
             double xferAmount = 45;
+            double recieveAcctBalance;
             if (xferAmount < 60) {
                 sendAcctBalance = sendAcctBalance - xferAmount;
                 receiveAcctBalance = recieveAcctBalance + xferAmount;
@@ -50,8 +56,8 @@ class AccountTest {
 
         @Test
         void getAccountDescription () {
-            string acctDescription = this.description;
-            string errorDescription = " This Account Is Closed";
+            String acctDescription = this.description;
+            String errorDescription = " This Account Is Closed";
 
             if (errorDescription.matches(acctDescription)) {
                 System.out.println("Correct account description");
@@ -61,8 +67,8 @@ class AccountTest {
 
         @Test
         void setAccountDescription () {
-            string acctDescription = "Savings";
-            string copyDescription = this.description;
+            String acctDescription = "Savings";
+            String copyDescription = this.description;
 
             if (acctDescription.matches(copyDescription)) {
                 System.out.println("Account description set");
@@ -83,7 +89,7 @@ class AccountTest {
 
         @Test
         void getTransaction () {
-            string transactionID = "123";
+            String transactionID = "123";
             try {
                 if (transactionID.matches("321")) {
                     System.out.println("Transaction found");
@@ -95,13 +101,13 @@ class AccountTest {
         }
         @Test
         void getAccountId () {
-            string mainID = this.acctID;
+            String mainID = this.acctID;
             return mainID;
         }
 
         @Test
         void getCustomerId () {
-            string mainID = this.customer;
+            String mainID = this.customer;
             return mainID;
         }
 
@@ -118,27 +124,28 @@ class AccountTest {
 
         @Test
         void testEquals() {
-        public Test( double test1, double test2){
-                    test1 = this.account;
-                    test2 = this.account;
-                }
+            double test1;
+            double test2;
+            test1 = this.account;
+            test2 = this.account;
+                
                 Test A1 = new Test(20, 30);
                 Test A2 = new Test(20, 31);
                 if (A1.equals(A2)) {
-                    println("Objects are equal");
+                    System.out.println("Objects are equal");
                 }
                 else
                 {
-                    println("Objects are not equal");
+                    System.out.println("Objects are not equal");
                 }
             }
 
         @Test
         void compareTo () {
-            string b1 = this.acctID;
-            string b2 = "01234";
+            String b1 = this.acctID;
+            String b2 = "01234";
             if (!(b1 == b2)) {
-                string b3 = b1.compareTo(b2);
+                int b3 = b1.compareTo(b2);
                 System.out.println("Results: " + b3);
             }
             else

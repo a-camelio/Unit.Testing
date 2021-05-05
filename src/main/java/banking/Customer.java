@@ -9,7 +9,7 @@ import java.util.*;
 public class Customer implements Comparable<Customer> {
     private static int nextId = 1;
 
-    private final Bank bank;
+    private final banking.Bank bank;
     private final String customerId;
     private final String lastName;
     private final String firstName;
@@ -21,7 +21,7 @@ public class Customer implements Comparable<Customer> {
      * @param lastName The last name of the account owner.
      * @param firstName The first name of the account owner.
      */
-    public Customer (Bank bank, String lastName, String firstName) {
+    public Customer (banking.Bank bank, String lastName, String firstName) {
         this.bank = null;
         this.customerId = "";
         this.lastName = "";
@@ -32,7 +32,7 @@ public class Customer implements Comparable<Customer> {
     /**
      * @return the bank
      */
-    public Bank getBank () {
+    public banking.Bank getBank () {
         return null;  // Stub
     }
 

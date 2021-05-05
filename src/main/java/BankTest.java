@@ -5,6 +5,7 @@ class BankTest {
 
     @org.junit.jupiter.api.Test
     void main() {
+
     }
 
     @org.junit.jupiter.api.Test
