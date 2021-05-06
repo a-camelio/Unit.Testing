@@ -1,12 +1,14 @@
+import banking.Account;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-class SavingsAccountTest extends Account {
+class SavingsAccountTest {
+    static double intRate = 3.5;
+    private double amount;
+    private double startBalance;
 
     @Test
-    void deposit(double amount) {
-        amount = Account.amount;
+    void deposit () {
+        double amount = Account.amount;
         double depositAmount = 200.00;
         if (depositAmount > amount)
         {
@@ -33,6 +35,7 @@ class SavingsAccountTest extends Account {
         }
         else
         {
+            double transferAmount = 0;
             mainAccount = mainAccount - transferAmount;
             System.out.println("Withdrawal complete. Balance is $" + mainAccount);
         }
@@ -40,6 +43,7 @@ class SavingsAccountTest extends Account {
 
     @Test
     void addInterestTransaction(double saveAccount, double goodInt, double calcInt) {
+        SavingsAccountTest testSavingsAccount = null;
         saveAccount = testSavingsAccount.startBalance;
         goodInt = testSavingsAccount.intRate;
 
@@ -51,17 +55,18 @@ class SavingsAccountTest extends Account {
         }
         else
         {
-            System.out.println("account must have over $50 to gain interest");
+            System.out.println("Account must have over $50 to gain interest");
         }
     }
 
     @Test
-    void getDefaultInterestRate() {
-        return defaultIntRate;
+    double getDefaultInterestRate() {
+        return intRate;
     }
 
     @Test
     void setDefaultInterestRate() {
-        defaultIntRate = testSavingsAccount.intRate;
+        SavingsAccountTest testSavingsAccount = null;
+        intRate = testSavingsAccount.intRate;
     }
 }
