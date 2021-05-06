@@ -9,6 +9,7 @@ import java.util.stream.Collectors;
  * @author wpollock
  */
 public abstract class Account implements Comparable<Account> {
+    public static double amount;
     private static int nextId = 1;
 
     protected final banking.Customer customer;
